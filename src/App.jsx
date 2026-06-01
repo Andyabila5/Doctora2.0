@@ -146,7 +146,7 @@ function App() {
             <a href={WA_LINK} className="btn-dark btn-wa" target="_blank" rel="noopener noreferrer">
               <WhatsappIcon /> Agenda tu cita
             </a>
-            <button className="btn-ghost">
+            <button className="btn-ghost" onClick={() => window.location.assign('/sobre-mi')}>
               Conoce más <ArrowIcon />
             </button>
           </div>
@@ -208,7 +208,7 @@ function App() {
             Mi compromiso es brindarte una atención médica
             de excelencia, con ética, empatía y respeto.
           </p>
-          <button className="btn-outline-round">
+          <button className="btn-outline-round" onClick={() => window.location.assign('/sobre-mi')}>
             <UserIcon /> Conoce más sobre mí
           </button>
         </div>
@@ -245,7 +245,9 @@ function App() {
             <p>Diagnóstico y tratamiento de problemas urinarios en la mujer.</p>
           </div>
         </div>
-        <button className="btn-dark center-btn">Ver todos los servicios</button>
+        <button className="btn-dark center-btn" onClick={() => window.location.assign('/servicios')}>
+          Ver todos los servicios
+        </button>
       </section>
 
       {/* CONTACT */}
