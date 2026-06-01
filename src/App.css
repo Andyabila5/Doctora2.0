@@ -43,6 +43,14 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .logo-text {
@@ -81,17 +89,20 @@ body {
 
 .nav-links li {
   cursor: pointer;
-  padding-bottom: 2px;
   transition: color 0.2s;
 }
 
-.nav-links li:hover {
+.nav-links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
   color: var(--dark);
 }
 
-.nav-links li.active {
+.nav-links a.active {
   color: var(--dark);
-  border-bottom: 2px solid var(--tan);
   font-weight: 500;
 }
 

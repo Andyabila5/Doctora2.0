@@ -1,11 +1,5 @@
-import { NavLink } from 'react-router-dom';
-
-const CalendarIcon = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-    <rect x="1" y="3" width="16" height="13" rx="2" stroke="currentColor" strokeWidth="1.5" fill="none" />
-    <path d="M1 7h16M6 1v4M12 1v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-  </svg>
-);
+import { NavLink, Link } from 'react-router-dom';
+import logoImg from './assets/Logo.png';
 
 const WhatsappIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -18,23 +12,19 @@ const WA_LINK = "https://wa.me/50687051691";
 export default function Navbar() {
   return (
     <nav className="nav">
-      <div className="logo">
-        <div className="logo-icon">
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-            <path d="M10 8c-2 1.5-3.5 4-2.5 7.5.6 2.2 2.2 3.5 4 3.5 1 0 1.8-.7 2.2-1.8.3-.7.5-1.6.5-2.7s.2-2 .5-2.7c.5-1 1.2-1.8 2.3-1.8 1.8 0 3.4 1.4 4 3.5 1 3.1-.4 5.8-2.5 7.5" stroke="#8b6b4f" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-            <path d="M26 8c2 1.5 3.5 4 2.5 7.5-.6 2.2-2.2 3.5-4 3.5-1 0-1.8-.7-2.2-1.8-.3-.7-.5-1.6-.5-2.7s-.2-2-.5-2.7c-.5-1-1.2-1.8-2.3-1.8-1.8 0-3.4 1.4-4 3.5-1 3.1.4 5.8 2.5 7.5" stroke="#8b6b4f" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-          </svg>
-        </div>
-        <div className="logo-text">
-          <span className="logo-name">Nova<br />Uroclinica</span>
-          <span className="logo-sub">— by Dra. Navarro G —</span>
-        </div>
-      </div>
+      <Link to="/" className="logo">
+        <img
+          src={logoImg}
+          alt="Nova Uroclinica by Dra. Navarro G"
+          className="logo-img"
+        />
+      </Link>
 
       <ul className="nav-links">
         <li><NavLink to="/" end className={({ isActive }) => isActive ? "active" : ""}>Inicio</NavLink></li>
         <li><NavLink to="/sobre-mi" className={({ isActive }) => isActive ? "active" : ""}>Sobre mí</NavLink></li>
-        <li>Servicios</li>
+        <li><NavLink to="/servicios" className={({ isActive }) => isActive ? "active" : ""}>Servicios</NavLink></li>
+        <li><NavLink to="/resenas" className={({ isActive }) => isActive ? "active" : ""}>Reseñas</NavLink></li>
         <li>Pacientes</li>
         <li>Contacto</li>
       </ul>

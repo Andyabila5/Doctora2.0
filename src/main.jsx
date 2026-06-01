@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider, ScrollRestoration, Outlet } from '
 import './index.css'
 import App from './App.jsx'
 import About from './About.jsx'
+import ServicesPage from './Services.jsx'
+import ReviewsPage from './ReviewsPage.jsx'
 
 function RootLayout() {
   return (
@@ -21,7 +23,8 @@ const router = createBrowserRouter([
     children: [
       { index: true,      element: <App /> },
       { path: 'sobre-mi', element: <About /> },
-      // { path: 'servicios', element: <Services /> },
+      { path: 'servicios', element: <ServicesPage /> },
+      { path: 'resenas', element: <ReviewsPage /> },
       // { path: 'pacientes', element: <Patients /> },
       // { path: 'contacto',  element: <Contact /> },
     ],
