@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import draImg from "./assets/Dra.jpg";
 import Navbar from "./Navbar.jsx";
+import Footer from "./Footer.jsx";
 
 /* ── Íconos SVG del sistema ── */
 const CalendarIcon = () => (
@@ -227,9 +229,9 @@ export default function About() {
                         >
                             <WhatsappIcon /> Agendar cita
                         </a>
-                        <button className="btn-ghost">
+                        <Link to="/servicios" className="btn-ghost">
                             Ver servicios <ArrowIcon />
-                        </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -401,27 +403,7 @@ export default function About() {
                     ))}
                 </div>
             </section>
-
-            {/* ── CTA ── */}
-            <section className="ab-cta">
-                <div className="ab-cta-box">
-                    <CalendarIcon />
-                    <h3>¿Lista para tu primera consulta?</h3>
-                    <p>
-                        Agenda tu cita y recibe atención médica especializada y personalizada.
-                    </p>
-                    <div className="ab-cta-btns">
-                        <a
-                            href="https://wa.me/50687051691"
-                            className="btn-outline-white ab-whatsapp-btn"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <WhatsappIcon /> Agendar cita por WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </section>
+            <Footer />
 
             {/* ── BOTÓN FLOTANTE WHATSAPP ── */}
             <a

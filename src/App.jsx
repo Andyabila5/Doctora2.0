@@ -2,6 +2,7 @@ import "./App.css";
 import heroImg from "./assets/hero.png";
 import draImg from "./assets/Dra.jpg";
 import Navbar from "./Navbar.jsx";
+import Footer from "./Footer.jsx";
 
 const KidneyIcon = () => (
   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -280,28 +281,7 @@ function App() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="footer">
-        <div className="footer-logo">
-          <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
-            <path d="M10 8c-2 1.5-3.5 4-2.5 7.5.6 2.2 2.2 3.5 4 3.5 1 0 1.8-.7 2.2-1.8.3-.7.5-1.6.5-2.7s.2-2 .5-2.7c.5-1 1.2-1.8 2.3-1.8 1.8 0 3.4 1.4 4 3.5 1 3.1-.4 5.8-2.5 7.5" stroke="#c9b49a" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-            <path d="M26 8c2 1.5 3.5 4 2.5 7.5-.6 2.2-2.2 3.5-4 3.5-1 0-1.8-.7-2.2-1.8-.3-.7-.5-1.6-.5-2.7s-.2-2-.5-2.7c-.5-1-1.2-1.8-2.3-1.8-1.8 0-3.4 1.4-4 3.5-1 3.1.4 5.8 2.5 7.5" stroke="#c9b49a" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-          </svg>
-          <div>
-            <span className="footer-logo-name">Nova Uroclinica</span>
-            <span className="footer-logo-sub">by Dra. Navarro G</span>
-          </div>
-        </div>
-        <p>© 2024 Nova UroClinica by Dra. Navarro G. Todos los derechos reservados.</p>
-        <div className="footer-socials">
-          <a href="#" aria-label="Facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round" /></svg>
-          </a>
-          <a href="#" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="1.5" /><circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" /></svg>
-          </a>
-        </div>
-      </footer>
+      <Footer />
 
       {/* BOTÓN FLOTANTE WHATSAPP */}
       <a

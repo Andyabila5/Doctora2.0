@@ -1,8 +1,7 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import Navbar from "./Navbar.jsx";
+import Footer from "./Footer.jsx";
 import draImg from "./assets/Dra3.jpg";
-import logoImg from "./assets/Logo.png";
 
 const Icon = ({ size = 22, strokeWidth = 2, children }) => (
   <svg
@@ -92,26 +91,6 @@ const LandmarkIcon = (props) => (
   </Icon>
 );
 
-const MapPinIcon = (props) => (
-  <Icon {...props}>
-    <path d="M12 21s7-4.5 7-11a7 7 0 10-14 0c0 6.5 7 11 7 11z" />
-    <circle cx="12" cy="10" r="2.5" />
-  </Icon>
-);
-
-const PhoneIcon = (props) => (
-  <Icon {...props}>
-    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.8 19.8 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.12.89.32 1.76.59 2.6a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.48-1.16a2 2 0 012.11-.45c.84.27 1.71.47 2.6.59A2 2 0 0122 16.92z" />
-  </Icon>
-);
-
-const ClockIcon = (props) => (
-  <Icon {...props}>
-    <circle cx="12" cy="12" r="9" />
-    <path d="M12 7v5l3 2" />
-  </Icon>
-);
-
 const WhatsappIcon = ({ size = 22 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
@@ -191,8 +170,6 @@ const paymentMethods = [
 ];
 
 const whatsappUrl = "https://wa.me/50687051691";
-const mapsEmbedUrl =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.822996164596!2d-84.43725062419842!3d10.340712492793735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa065d16e43a39b%3A0xd5efab948478f1e!2sNOVA%20UROCLINICA%20by%20Dra.%20Navarro!5e0!3m2!1ses!2scr!4v1700000000000!5m2!1ses!2scr";
 
 export default function ServicesPage() {
   useEffect(() => {
@@ -287,99 +264,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="sp-section">
-        <div className="sp-container">
-          <span className="sp-label">Ubicación —</span>
-          <h2 className="sp-heading">NOVA UROCLINICA by Dra. Navarro</h2>
-          <p className="sp-lead">San Carlos, Costa Rica</p>
-
-          <div className="sp-location-grid">
-            <article className="sp-card sp-location-info">
-              <h3>Información de contacto</h3>
-              <ul>
-                <li>
-                  <MapPinIcon size={18} />
-                  <span>NOVA UROCLINICA by Dra. Navarro, San Carlos, Costa Rica</span>
-                </li>
-                <li>
-                  <PhoneIcon size={18} />
-                  <span>+506 8705 1691</span>
-                </li>
-                <li>
-                  <ClockIcon size={18} />
-                  <span>
-                    Lunes a Viernes 1:00 PM - 5:30 PM, Sábado y Domingo: Cerrado
-                  </span>
-                </li>
-              </ul>
-              <a
-                href={whatsappUrl}
-                className="sp-wa-button small"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <WhatsappIcon size={18} />
-                Escribir por WhatsApp
-              </a>
-            </article>
-
-            <article className="sp-card sp-map-card">
-              <iframe
-                title="NOVA UROCLINICA by Dra. Navarro"
-                src={mapsEmbedUrl}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-              <a
-                href="https://maps.google.com/?q=NOVA+UROCLINICA+by+Dra.+Navarro"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="sp-map-link"
-              >
-                Ver en Google Maps
-              </a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <footer className="sp-footer">
-        <div className="sp-container sp-footer-grid">
-          <div>
-            <div className="sp-footer-brand">
-              <img
-                src={logoImg}
-                alt="Nova Uroclinica by Dra. Navarro G"
-              />
-              <div>
-                <h4>Dra. Marcela Navarro Guzmán</h4>
-                <p>Especialista en Urología</p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h5>Enlaces rápidos</h5>
-            <nav className="sp-footer-links">
-              <Link to="/">Inicio</Link>
-              <Link to="/sobre-mi">Sobre mí</Link>
-              <Link to="/servicios">Servicios</Link>
-              <Link to="/contacto">Contacto</Link>
-            </nav>
-          </div>
-
-          <div>
-            <h5>Contacto</h5>
-            <p>+506 8705 1691</p>
-            <p>San Carlos, Costa Rica</p>
-            <p>Lunes a Viernes 1:00 PM - 5:30 PM</p>
-          </div>
-        </div>
-        <div className="sp-footer-copy">
-          © {new Date().getFullYear()} NOVA UROCLINICA by Dra. Navarro. Todos
-          los derechos reservados.
-        </div>
-      </footer>
+      <Footer />
 
       <a
         href={whatsappUrl}
@@ -551,8 +436,7 @@ export default function ServicesPage() {
         }
 
         .sp-service-card h3,
-        .sp-payment-card h3,
-        .sp-location-info h3 {
+        .sp-payment-card h3 {
           margin: 14px 0 8px;
           color: #2a1f18;
           font-size: 1.02rem;
@@ -583,133 +467,6 @@ export default function ServicesPage() {
 
         .sp-payment-card .sp-icon-circle {
           margin: 0 auto;
-        }
-
-        .sp-location-grid {
-          display: grid;
-          grid-template-columns: 1fr 1.2fr;
-          gap: 20px;
-        }
-
-        .sp-location-info {
-          padding: 24px;
-          background: #fff;
-        }
-
-        .sp-location-info ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          display: grid;
-          gap: 14px;
-        }
-
-        .sp-location-info li {
-          display: flex;
-          align-items: flex-start;
-          gap: 10px;
-          color: #5a4535;
-          line-height: 1.6;
-        }
-
-        .sp-location-info li svg {
-          margin-top: 2px;
-          color: #8b6b4f;
-          flex-shrink: 0;
-        }
-
-        .sp-map-card {
-          overflow: hidden;
-          background: #fff;
-        }
-
-        .sp-map-card iframe {
-          width: 100%;
-          height: 350px;
-          border: 0;
-          display: block;
-        }
-
-        .sp-map-link {
-          display: inline-block;
-          padding: 14px 16px;
-          color: #8b6b4f;
-          font-weight: 600;
-          text-decoration: none;
-        }
-
-        .sp-map-link:hover {
-          color: #2a1f18;
-          text-decoration: underline;
-        }
-
-        .sp-footer {
-          background: #2a1f18;
-          color: #c9b49a;
-          margin-top: 12px;
-        }
-
-        .sp-footer-grid {
-          padding: 56px 32px 34px;
-          display: grid;
-          grid-template-columns: 1.4fr 1fr 1fr;
-          gap: 28px;
-        }
-
-        .sp-footer-brand {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-        }
-
-        .sp-footer-brand img {
-          width: 72px;
-          height: 72px;
-          object-fit: contain;
-          border-radius: 50%;
-          border: 2px solid #fff;
-          background: #fff;
-          padding: 6px;
-        }
-
-        .sp-footer-brand h4 {
-          margin: 0;
-          color: #fff;
-          font-size: 1.02rem;
-        }
-
-        .sp-footer-brand p,
-        .sp-footer p {
-          margin: 4px 0 0;
-          color: #c9b49a;
-        }
-
-        .sp-footer h5 {
-          margin: 0 0 10px;
-          color: #fff;
-          font-size: 0.95rem;
-        }
-
-        .sp-footer-links {
-          display: grid;
-          gap: 8px;
-        }
-
-        .sp-footer-links a {
-          color: #c9b49a;
-          text-decoration: none;
-        }
-
-        .sp-footer-links a:hover {
-          color: #fff;
-        }
-
-        .sp-footer-copy {
-          padding: 16px 32px 22px;
-          text-align: center;
-          border-top: 1px solid rgba(201, 180, 154, 0.2);
-          color: #9a8070;
-          font-size: 0.88rem;
         }
 
         .sp-fab-wa {
@@ -755,9 +512,7 @@ export default function ServicesPage() {
 
           .sp-hero-grid,
           .sp-services-grid,
-          .sp-payment-grid,
-          .sp-location-grid,
-          .sp-footer-grid {
+          .sp-payment-grid {
             grid-template-columns: 1fr;
           }
 
@@ -767,14 +522,6 @@ export default function ServicesPage() {
 
           .sp-hero-image {
             height: 320px;
-          }
-
-          .sp-footer-grid {
-            padding: 48px 20px 28px;
-          }
-
-          .sp-footer-copy {
-            padding: 14px 20px 22px;
           }
         }
       `}</style>

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Navbar from "./Navbar.jsx";
+import Footer from "./Footer.jsx";
 
 const reviews = [
   {
@@ -278,6 +279,8 @@ export default function ReviewsPage() {
           </a>
         </div>
       </section>
+
+      <Footer />
 
       <a
         href={WHATSAPP_URL}

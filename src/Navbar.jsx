@@ -25,8 +25,7 @@ export default function Navbar() {
         <li><NavLink to="/sobre-mi" className={({ isActive }) => isActive ? "active" : ""}>Sobre mí</NavLink></li>
         <li><NavLink to="/servicios" className={({ isActive }) => isActive ? "active" : ""}>Servicios</NavLink></li>
         <li><NavLink to="/resenas" className={({ isActive }) => isActive ? "active" : ""}>Reseñas</NavLink></li>
-        <li>Pacientes</li>
-        <li>Contacto</li>
+        <li><NavLink to="/contacto" className={({ isActive }) => isActive ? "active" : ""}>Contacto</NavLink></li>
       </ul>
 
       <a href={WA_LINK} className="btn-primary btn-wa-nav" target="_blank" rel="noopener noreferrer">

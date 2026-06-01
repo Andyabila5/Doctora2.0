@@ -6,6 +6,7 @@ import App from './App.jsx'
 import About from './About.jsx'
 import ServicesPage from './Services.jsx'
 import ReviewsPage from './ReviewsPage.jsx'
+import Contact from './Contact.jsx'
 
 function RootLayout() {
   return (
@@ -25,8 +26,7 @@ const router = createBrowserRouter([
       { path: 'sobre-mi', element: <About /> },
       { path: 'servicios', element: <ServicesPage /> },
       { path: 'resenas', element: <ReviewsPage /> },
-      // { path: 'pacientes', element: <Patients /> },
-      // { path: 'contacto',  element: <Contact /> },
+      { path: 'contacto', element: <Contact /> },
     ],
   },
 ])
